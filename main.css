@@ -147,22 +147,37 @@ html {
 
 body {
   background-color: hsl(185, 75%, 39%);
-  background-image: url("./images/bg-pattern-top.svg");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg-top {
+  position: absolute;
+  bottom: 42%;
+  right: 50%;
+  z-index: -1;
+}
+
+.bg-bottom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-170deg);
+  z-index: -1;
 }
 
 .attribution {
   position: absolute;
-  top: 100%;
+  top: 95%;
 }
 
 .card {
-  width: 23em;
-  height: 26em;
+  width: 20em;
+  height: 22em;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -212,9 +227,9 @@ body {
 }
 
 .card-body > .name {
-  font-size: 1.2em;
+  font-size: 1.1em;
   position: absolute;
-  top: 2em;
+  top: 2.5em;
 }
 
 .name > .age {
@@ -224,19 +239,19 @@ body {
 }
 
 .card-body > .city {
-  font-size: 1em;
+  font-size: 0.9em;
   color: hsl(227, 10%, 46%);
   font-weight: 400;
   width: 50%;
   position: absolute;
-  top: 4.5em;
+  top: 4.6em;
 }
 
 .card-stats {
   display: flex;
   width: 90%;
   height: 17%;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 700;
   justify-content: space-around;
 }
